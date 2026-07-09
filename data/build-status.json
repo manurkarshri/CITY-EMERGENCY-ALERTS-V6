@@ -2,9 +2,11 @@
   "schemaVersion": "6.0.0",
   "build": {
     "version": "6.0.0-dev",
-    "milestone": "A",
+    "milestone": "B1",
     "status": "healthy",
-    "buildTime": "2026-07-09T09:48:22.777Z",
-    "note": "Core Platform Foundation"
+    "buildTime": "2026-07-09T10:23:05.909Z",
+    "note": "Intelligence Core Foundation",
+    "alerts": 2,
+    "incidents": 1
   }
 }
