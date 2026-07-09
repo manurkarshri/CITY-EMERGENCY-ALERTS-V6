@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "6.0.0",
+  "generatedAt": null,
+  "status": "seed",
+  "situation": {
+    "snapshot": "Data pipeline not yet run.",
+    "weather": null,
+    "changes": []
+  },
+  "alerts": [],
+  "incidents": [],
+  "journeyContext": {},
+  "sourceHealth": {}
+}

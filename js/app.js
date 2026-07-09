@@ -1,0 +1,2 @@
+async function init() { if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(console.warn); const el = document.getElementById("buildStatus"); try { const response = await fetch("data/build-status.json?v=" + Date.now(), { cache: "no-store" }); const data = await response.json(); el.textContent = `Build: ${data.build?.version || "unknown"} · Status: ${data.build?.status || "unknown"}`; } catch { el.textContent = "Build status unavailable."; } }
+init();

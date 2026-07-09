@@ -1,0 +1,7 @@
+.app-header { background:#b71c1c; color:white; text-align:center; padding:12px; }
+.app-header h1 { margin:0; font-size:18px; }
+.app-header p { margin:3px 0; font-size:12px; }
+.tabs { display:flex; overflow-x:auto; background:#e02424; }
+.tabs button { flex:1; min-width:82px; border:0; background:transparent; color:white; padding:12px 8px; font-weight:800; }
+.container { max-width:860px; margin:0 auto; padding:12px; }
+.card { background:white; border-radius:10px; padding:14px; box-shadow:0 1px 4px #0001; }
