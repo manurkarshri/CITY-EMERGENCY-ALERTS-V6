@@ -1,19 +1,11 @@
-# CITY EMERGENCY ALERTS V6.0 — RC2.1 Frontend Refactor
+# CITY EMERGENCY ALERTS V6.0 — RC2.2 Stabilization Patch
 
 ## Purpose
-RC2.1 replaces the large single-file frontend with a modular frontend architecture.
+This patch fixes the immediate RC2.1 UI/functionality issues:
+- Removes CEA badge and restores centered header.
+- Forces location filter to stay collapsed by default.
+- Makes Alerts and Incidents show broader relevant data if strict locality filtering returns empty.
+- Makes Journey button produce a visible route assessment using typed origin/destination.
+- Keeps modular frontend architecture.
 
-## Why
-This reduces future upload/copy errors and makes the app easier to maintain.
-
-## Replace these files/folders
-- index.html
-- css/
-- js/
-
-## Do not replace
-- scripts/
-- config/
-- data/
-- tests/
-- workflows/
+## Upload only the application files in this package.
