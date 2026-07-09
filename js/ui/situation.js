@@ -19,7 +19,7 @@ export function renderSituation() {
           <div class="metric"><strong>${weather.visibility ?? "--"} km</strong><span>Visibility</span></div>
         </div>
         <p>${escapeHtml((weather.advice || [])[0] || "No major weather issue indicated.")}</p>
-      ` : `<p class="empty">Weather intelligence is not available yet.</p>`}
+      ` : `<p class="empty">Weather intelligence is not available yet. Run Update All Intelligence to refresh environmental data.</p>`}
     </section>
 
     <section class="card">

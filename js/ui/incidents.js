@@ -1,10 +1,10 @@
-import { state, filteredEvents } from "../core/state.js";
+import { state, filteredEvents, relevantEvents } from "../core/state.js";
 import { renderEventList } from "./events.js";
 
 export function renderIncidents() {
   const filtered = filteredEvents(state.incidents);
-  const items = filtered.length ? filtered : (state.incidents || []);
-  const note = filtered.length ? "" : `<p class="small">Showing broader district incidents because no locality-specific incident matched your filter.</p>`;
+  const items = relevantEvents(state.incidents);
+  const note = filtered.length || !items.length ? "" : `<p class="small">Showing broader district incidents because no locality-specific incident matched your current filter.</p>`;
 
   document.getElementById("tab-incidents").innerHTML = `
     <section class="card feature">

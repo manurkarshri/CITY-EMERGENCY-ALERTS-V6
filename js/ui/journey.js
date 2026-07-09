@@ -2,6 +2,8 @@ import { state } from "../core/state.js";
 import { escapeHtml, escapeAttr } from "../utils/format.js";
 
 let manualJourney = null;
+let lastStart = localStorage.getItem("cea.journey.start") || "Kharadi";
+let lastDestination = localStorage.getItem("cea.journey.destination") || "Hinjawadi";
 
 export function renderJourney() {
   const panel = document.getElementById("tab-journey");
@@ -14,15 +16,15 @@ export function renderJourney() {
       <h2>Journey</h2>
       <p>Check route suitability based on current alerts, incidents, weather and environmental intelligence.</p>
       <div class="form-row">
-        <input id="journeyStart" placeholder="Start location" value="${escapeHtml(manualJourney?.start || "Kharadi")}" />
-        <input id="journeyDestination" placeholder="Destination" value="${escapeHtml(manualJourney?.destination || "Hinjawadi")}" />
+        <input id="journeyStart" placeholder="Start location" value="${escapeHtml(lastStart)}" />
+        <input id="journeyDestination" placeholder="Destination" value="${escapeHtml(lastDestination)}" />
         <select id="journeyDeparture"><option>Leave Now</option><option>Choose Time</option></select>
         <button class="primary-btn" id="journeyBtn">Analyse Journey</button>
       </div>
-      <p class="small">Current release provides front-end journey assessment using configured intelligence. Live map API routing will come in the live-data phase.</p>
+      <p class="small">Production Stabilization Update 1 provides app-side journey scoring and Google Maps handoff. Live traffic API routing is planned for Update 2.</p>
     </section>
     ${best ? renderBestRoute(best) : `<section class="card empty">Journey intelligence has not generated route assessments yet.</section>`}
-    ${journeys.map(renderJourneyComparison).join("")}
+    ${journeys.length ? renderKnownJourneys(journeys) : ""}
   `;
 
   document.getElementById("journeyBtn")?.addEventListener("click", analyseTypedJourney);
@@ -31,13 +33,15 @@ export function renderJourney() {
 function analyseTypedJourney() {
   const start = document.getElementById("journeyStart")?.value?.trim() || "Start";
   const destination = document.getElementById("journeyDestination")?.value?.trim() || "Destination";
+  lastStart = start;
+  lastDestination = destination;
+  localStorage.setItem("cea.journey.start", start);
+  localStorage.setItem("cea.journey.destination", destination);
 
   const known = findKnownJourney(start, destination);
-  if (known?.bestRoute) {
-    manualJourney = { ...known.bestRoute, start, destination };
-  } else {
-    manualJourney = createManualRoute(start, destination);
-  }
+  manualJourney = known?.bestRoute
+    ? { ...known.bestRoute, label: `${start} to ${destination}`, start, destination }
+    : createManualRoute(start, destination);
 
   renderJourney();
 }
@@ -45,20 +49,21 @@ function analyseTypedJourney() {
 function findKnownJourney(start, destination) {
   const s = start.toLowerCase();
   const d = destination.toLowerCase();
-  return (state.journey?.journeys || []).find(j =>
-    (j.start || "").toLowerCase().includes(s) ||
-    (j.destination || "").toLowerCase().includes(d) ||
-    s.includes((j.start || "").toLowerCase()) ||
-    d.includes((j.destination || "").toLowerCase())
-  );
+  return (state.journey?.journeys || []).find(j => {
+    const js = (j.start || "").toLowerCase();
+    const jd = (j.destination || "").toLowerCase();
+    return js.includes(s) || s.includes(js) || jd.includes(d) || d.includes(jd);
+  });
 }
 
 function createManualRoute(start, destination) {
   const alerts = (state.alerts || []).length;
   const incidents = (state.incidents || []).length;
   const river = (state.environmental?.riverIntelligence || []).length;
-  const penalty = Math.min(35, alerts * 8 + incidents * 6 + river * 5);
-  const score = Math.max(45, 100 - penalty);
+  const weatherRegions = Object.values(state.environmental?.weatherIntelligence?.regions || {});
+  const highWeather = weatherRegions.filter(w => ["High", "Medium"].includes(w.rainRisk)).length;
+  const penalty = Math.min(45, alerts * 8 + incidents * 6 + river * 5 + highWeather * 5);
+  const score = Math.max(40, 100 - penalty);
   const label = score >= 85 ? "Good to Go" : score >= 65 ? "Proceed with Caution" : "Replan if Possible";
   const delay = score >= 85 ? 5 : score >= 65 ? 15 : 30;
 
@@ -69,12 +74,12 @@ function createManualRoute(start, destination) {
     journeySuitability: {
       score,
       label,
-      recommendation: `${label}. Assessment based on current alerts, incidents and environmental intelligence.`
+      recommendation: `${label}. Assessment is based on current alerts, incidents, weather and environmental intelligence.`
     },
     estimatedTimeMin: null,
     estimatedDelayMin: delay,
     googleMapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(start + " to " + destination)}`,
-    explanation: `${start} to ${destination}: Journey suitability is ${label} (${score}/100). Estimated delay may be around ${delay} minutes. Open in Maps to review live traffic route options.`
+    explanation: `${start} to ${destination}: Journey suitability is ${label} (${score}/100). Estimated delay may be around ${delay} minutes. Open in Maps to review live route and traffic options.`
   };
 }
 
@@ -96,19 +101,26 @@ function renderBestRoute(route) {
   `;
 }
 
-function renderJourneyComparison(journey) {
+function renderKnownJourneys(journeys) {
   return `
     <section class="card">
-      <h2>${escapeHtml(journey.start)} → ${escapeHtml(journey.destination)}</h2>
-      <details>
-        <summary>Compare routes</summary>
-        ${(journey.routes || []).map(route => `
-          <div class="metric" style="margin-top:8px">
-            <strong>${escapeHtml(route.label)}</strong>
-            <span>${route.journeySuitability?.score ?? "--"}/100 · ${escapeHtml(route.journeySuitability?.label || "")} · ${route.estimatedTimeMin ?? "--"} min</span>
-          </div>
-        `).join("")}
-      </details>
+      <h2>Configured Journey Examples</h2>
+      <p class="small">These are generated route assessments from the current intelligence pipeline.</p>
+      ${journeys.map(renderJourneyComparison).join("")}
     </section>
+  `;
+}
+
+function renderJourneyComparison(journey) {
+  return `
+    <details>
+      <summary>${escapeHtml(journey.start)} → ${escapeHtml(journey.destination)}</summary>
+      ${(journey.routes || []).map(route => `
+        <div class="metric" style="margin-top:8px">
+          <strong>${escapeHtml(route.label)}</strong>
+          <span>${route.journeySuitability?.score ?? "--"}/100 · ${escapeHtml(route.journeySuitability?.label || "")} · ${route.estimatedTimeMin ?? "--"} min</span>
+        </div>
+      `).join("")}
+    </details>
   `;
 }

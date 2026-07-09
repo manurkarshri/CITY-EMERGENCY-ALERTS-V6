@@ -1,10 +1,10 @@
-import { state, filteredEvents } from "../core/state.js";
+import { state, filteredEvents, relevantEvents } from "../core/state.js";
 import { renderEventList } from "./events.js";
 
 export function renderAlerts() {
   const filtered = filteredEvents(state.alerts);
-  const items = filtered.length ? filtered : (state.alerts || []);
-  const note = filtered.length ? "" : `<p class="small">Showing broader district alerts because no locality-specific alert matched your filter.</p>`;
+  const items = relevantEvents(state.alerts);
+  const note = filtered.length || !items.length ? "" : `<p class="small">Showing broader district alerts because no locality-specific alert matched your current filter.</p>`;
 
   document.getElementById("tab-alerts").innerHTML = `
     <section class="card feature">
