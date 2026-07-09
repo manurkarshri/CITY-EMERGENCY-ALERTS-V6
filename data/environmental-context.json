@@ -1,8 +1,8 @@
 {
   "schemaVersion": "6.0.0",
-  "generatedAt": "2026-07-09T17:56:40.357Z",
+  "generatedAt": "2026-07-09T19:20:01.647Z",
   "weatherIntelligence": {
-    "generatedAt": "2026-07-09T17:56:40.356Z",
+    "generatedAt": "2026-07-09T19:20:01.646Z",
     "regions": {}
   },
   "riverIntelligence": [
@@ -35,7 +35,7 @@
       "timeline": {
         "state": "developing",
         "note": "Khadakwasla Dam release is high.",
-        "updatedAt": "2026-07-09T17:56:40.356Z"
+        "updatedAt": "2026-07-09T19:20:01.646Z"
       },
       "evidence": [
         {
@@ -73,7 +73,7 @@
       "timeline": {
         "state": "monitoring",
         "note": "Pawna Dam release is elevated.",
-        "updatedAt": "2026-07-09T17:56:40.356Z"
+        "updatedAt": "2026-07-09T19:20:01.646Z"
       },
       "evidence": [
         {
@@ -90,7 +90,7 @@
     }
   ],
   "seasonalIntelligence": {
-    "generatedAt": "2026-07-09T17:56:40.357Z",
+    "generatedAt": "2026-07-09T19:20:01.647Z",
     "activeSeason": "monsoon",
     "priorityHazards": [
       "flood",
@@ -103,7 +103,7 @@
     "advice": "Monitor rainfall, dam releases, waterlogging and ghat conditions."
   },
   "geographicIntelligence": {
-    "generatedAt": "2026-07-09T17:56:40.356Z",
+    "generatedAt": "2026-07-09T19:20:01.647Z",
     "model": "administrative-ui-operational-backend",
     "operationalZones": {
       "river_corridors": [
@@ -184,7 +184,7 @@
     "note": "UI remains Region → Taluka → Locality. Operational geography is used only by intelligence engines."
   },
   "criticalInfrastructure": {
-    "generatedAt": "2026-07-09T17:56:40.357Z",
+    "generatedAt": "2026-07-09T19:20:01.647Z",
     "mode": "on-demand",
     "relevantDomains": [
       "bridges",
@@ -223,7 +223,7 @@
     }
   },
   "environmentalImpact": {
-    "generatedAt": "2026-07-09T17:56:40.357Z",
+    "generatedAt": "2026-07-09T19:20:01.647Z",
     "riskLevel": "Elevated",
     "impacts": [
       "1 river or dam related warning(s) may affect downstream areas.",
