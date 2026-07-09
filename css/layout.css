@@ -1,7 +1,1 @@
-.app-header { background:#b71c1c; color:white; text-align:center; padding:12px; }
-.app-header h1 { margin:0; font-size:18px; }
-.app-header p { margin:3px 0; font-size:12px; }
-.tabs { display:flex; overflow-x:auto; background:#e02424; }
-.tabs button { flex:1; min-width:82px; border:0; background:transparent; color:white; padding:12px 8px; font-weight:800; }
-.container { max-width:860px; margin:0 auto; padding:12px; }
-.card { background:white; border-radius:10px; padding:14px; box-shadow:0 1px 4px #0001; }
+.app-header{background:linear-gradient(135deg,var(--red),#7f1010);color:#fff;padding:14px 16px;text-align:center}.app-header h1{margin:0;font-size:20px}.app-header p{margin:2px 0;font-size:13px}.location-bar{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:10px;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 1px 4px #0001}.location-bar label{font-size:11px;color:var(--muted);display:flex;flex-direction:column;gap:4px}.location-bar select{border:1px solid var(--border);border-radius:10px;padding:8px;background:#fff}.tabs{display:flex;overflow-x:auto;background:var(--red2)}.tabs button{flex:1;min-width:92px;border:0;background:transparent;color:#fff;padding:13px 8px;font-weight:700;border-bottom:4px solid transparent}.tabs button.active{background:#fff2;border-bottom-color:#fff}.container{max-width:960px;margin:0 auto;padding:12px}.tab-panel{display:none}.tab-panel.active{display:block}.app-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;color:var(--muted);font-size:12px;max-width:960px;margin:8px auto 20px;padding:0 12px}
