@@ -10,8 +10,15 @@ import { buildEmergencyStory } from "./environment/emergency-story-engine.js";
 
 log("Environmental Intelligence build started.");
 const intelligence = await readJson("data/intelligence.json", { alerts: [], incidents: [] });
-const weather = await readJson("data/weather.json", null) || await readJson("data/weather-sample.json", { regions: {} });
-const river = await readJson("data/river-status.json", null) || await readJson("data/river-sample.json", { items: [] });
+const weatherPrimary = await readJson("data/weather.json", null);
+const weather = weatherPrimary?.regions && Object.keys(weatherPrimary.regions).length
+  ? weatherPrimary
+  : await readJson("data/weather-sample.json", { regions: {} });
+
+const riverPrimary = await readJson("data/river-status.json", null);
+const river = riverPrimary?.items && riverPrimary.items.length
+  ? riverPrimary
+  : await readJson("data/river-sample.json", { items: [] });
 const activeEvents = [...(intelligence.alerts || []), ...(intelligence.incidents || [])];
 
 const weatherIntelligence = buildWeatherIntelligence(weather);
