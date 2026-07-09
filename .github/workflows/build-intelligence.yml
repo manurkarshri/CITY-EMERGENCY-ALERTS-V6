@@ -1,4 +1,4 @@
-name: V6 Build Status
+name: V6 Build Intelligence Core
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ permissions:
   contents: write
 
 jobs:
-  build-status:
+  build-intelligence:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,14 +19,18 @@ jobs:
         with:
           node-version: 22
 
+      - name: Run Decision Intelligence Core
+        run: node scripts/run-intelligence-core.js
+
+      - name: Validate Generated Data
+        run: node scripts/validation/validate-build.js
+
       - name: Generate Build Status
         run: node scripts/builders/build-status.js
 
-      - name: Commit Generated Build Status
+      - name: Commit Generated Intelligence
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update V6 build status"
-          file_pattern: data/build-status.json
-
-      - name: Completed
-        run: echo "Build status updated successfully."
+          commit_message: "Build V6 intelligence core"
+          file_pattern: |
+            data/*.json

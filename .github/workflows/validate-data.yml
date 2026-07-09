@@ -22,11 +22,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: Display Node Version
-        run: node --version
-
       - name: Validate JSON Files
         run: node scripts/validation/validate-build.js
 
       - name: Validation Completed
-        run: echo "✅ Validation completed successfully."
+        run: echo "Validation completed successfully."
