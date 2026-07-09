@@ -1,11 +1,19 @@
-# CITY EMERGENCY ALERTS V6.0 — RC2.2 Stabilization Patch
+# CITY EMERGENCY ALERTS V6.0 — Production Stabilization Update 1
 
 ## Purpose
-This patch fixes the immediate RC2.1 UI/functionality issues:
-- Removes CEA badge and restores centered header.
-- Forces location filter to stay collapsed by default.
-- Makes Alerts and Incidents show broader relevant data if strict locality filtering returns empty.
-- Makes Journey button produce a visible route assessment using typed origin/destination.
-- Keeps modular frontend architecture.
 
-## Upload only the application files in this package.
+This update stabilizes the app shell before live data integration.
+
+## Fixed / stabilized
+
+- Header centered and simplified.
+- Compact location selector kept collapsed by default.
+- Alerts and incidents display broader relevant events when the selected locality has no exact match.
+- Journey tab now produces a visible assessment when the user enters custom start and destination.
+- Weather fallback builder fixed so environmental intelligence uses sample data when live weather data is empty.
+- Build status now reports Production Stabilization Update 1.
+- README and VERSION updated.
+
+## Not included
+
+Live data integration is intentionally reserved for Update 2.

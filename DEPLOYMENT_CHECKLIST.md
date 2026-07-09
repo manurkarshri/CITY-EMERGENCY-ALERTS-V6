@@ -1,12 +1,18 @@
-# RC2.2 Deployment
+# Production Stabilization Update 1 — Deployment Checklist
 
-Upload/replace only:
-- index.html
-- css/layout.css
-- js/core/location.js
-- js/ui/alerts.js
-- js/ui/incidents.js
-- js/ui/journey.js
-
-No workflows need to be run.
-Wait for GitHub Pages deployment, then hard refresh with Ctrl + Shift + R.
+1. Extract ZIP.
+2. Upload all contents to the repository root.
+3. Replace matching files.
+4. Commit changes.
+5. Run **V6 Update All Intelligence**.
+6. Run **V6 Validate Data**.
+7. Run **V6 Build Status**.
+8. Wait for GitHub Pages deployment.
+9. Hard refresh live site using Ctrl + Shift + R.
+10. Check:
+   - Situation
+   - Alerts
+   - Incidents
+   - Journey
+   - Official
+   - Emergency

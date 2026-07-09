@@ -1,6 +1,6 @@
 {
   "name": "city-emergency-alerts-v6",
-  "version": "6.0.0-rc1",
+  "version": "6.0.0-production-stabilization",
   "type": "module",
   "private": true,
   "scripts": {
@@ -9,7 +9,8 @@
     "build:intelligence": "node scripts/run-intelligence-core.js",
     "build:environmental": "node scripts/build-environmental-intelligence.js",
     "build:journey": "node scripts/build-journey-intelligence.js",
-    "test": "node tests/run-tests.js"
+    "test": "node tests/run-tests.js",
+    "build:all": "node scripts/run-intelligence-core.js && node scripts/build-environmental-intelligence.js && node scripts/build-journey-intelligence.js && node scripts/builders/build-status.js"
   },
   "license": "MIT"
 }
