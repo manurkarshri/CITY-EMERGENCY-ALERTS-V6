@@ -1,19 +1,20 @@
-# CITY EMERGENCY ALERTS V6.0 — Production Stabilization Update 1
+# CITY EMERGENCY ALERTS V6.0 — PC1 Synchronized Application
 
 ## Purpose
 
-This update stabilizes the app shell before live data integration.
+PC1 is a synchronized application package created from the actual repository baseline to eliminate mixed-version frontend issues.
 
-## Fixed / stabilized
+## Included
 
-- Header centered and simplified.
-- Compact location selector kept collapsed by default.
-- Alerts and incidents display broader relevant events when the selected locality has no exact match.
-- Journey tab now produces a visible assessment when the user enters custom start and destination.
-- Weather fallback builder fixed so environmental intelligence uses sample data when live weather data is empty.
-- Build status now reports Production Stabilization Update 1.
-- README and VERSION updated.
+- Complete synchronized frontend
+- CSS modules
+- JavaScript modules
+- Data pipeline files
+- GitHub workflows
+- Validation scripts
+- Build status updated to Production Stabilization Update 1
+- Local validation and tests passed
 
-## Not included
+## Next update
 
-Live data integration is intentionally reserved for Update 2.
+Update 2 will focus on Live Intelligence Integration.
