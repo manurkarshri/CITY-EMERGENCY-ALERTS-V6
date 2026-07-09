@@ -1,15 +1,19 @@
-# CITY EMERGENCY ALERTS V6.0 — RC2 UI Enhancement
+# CITY EMERGENCY ALERTS V6.0 — RC2.1 Frontend Refactor
 
 ## Purpose
-RC2 improves visual quality, spacing, hierarchy, mobile usability, and tab presentation.
+RC2.1 replaces the large single-file frontend with a modular frontend architecture.
 
-## Files to replace
+## Why
+This reduces future upload/copy errors and makes the app easier to maintain.
+
+## Replace these files/folders
 - index.html
-- css/base.css
-- css/layout.css
-- css/components.css
-- css/responsive.css
-- js/app.js
+- css/
+- js/
 
-## No backend changes
-This patch does not change scripts, workflows, data, collectors, intelligence engines, or configuration.
+## Do not replace
+- scripts/
+- config/
+- data/
+- tests/
+- workflows/
