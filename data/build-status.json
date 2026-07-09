@@ -2,11 +2,13 @@
   "schemaVersion": "6.0.0",
   "build": {
     "version": "6.0.0-dev",
-    "milestone": "B1",
+    "milestone": "B2",
     "status": "healthy",
-    "buildTime": "2026-07-09T10:45:26.595Z",
-    "note": "Intelligence Core Foundation",
+    "buildTime": "2026-07-09T11:17:27.346Z",
+    "note": "Environmental Intelligence Layer",
     "alerts": 2,
-    "incidents": 1
+    "incidents": 1,
+    "weatherRegions": 0,
+    "riverEvents": 2
   }
 }
