@@ -1,9 +1,58 @@
 {
   "schemaVersion": "6.0.0",
-  "generatedAt": "2026-07-09T19:20:01.647Z",
+  "generatedAt": "2026-07-09T19:54:41.971Z",
   "weatherIntelligence": {
-    "generatedAt": "2026-07-09T19:20:01.646Z",
-    "regions": {}
+    "generatedAt": "2026-07-09T19:54:41.968Z",
+    "regions": {
+      "pune_city": {
+        "label": "Pune City",
+        "source": "Sample",
+        "temp": 27,
+        "rain6h": 18,
+        "wind": 32,
+        "visibility": 4,
+        "rainRisk": "Medium",
+        "windRisk": "Low",
+        "visibilityRisk": "Low",
+        "heatRisk": "Normal",
+        "travelImpact": "Medium",
+        "advice": [
+          "Moderate rainfall may slow travel in low-lying areas."
+        ]
+      },
+      "pcmc": {
+        "label": "Pimpri-Chinchwad",
+        "source": "Sample",
+        "temp": 26,
+        "rain6h": 16,
+        "wind": 28,
+        "visibility": 5,
+        "rainRisk": "Medium",
+        "windRisk": "Low",
+        "visibilityRisk": "Low",
+        "heatRisk": "Normal",
+        "travelImpact": "Medium",
+        "advice": [
+          "Moderate rainfall may slow travel in low-lying areas."
+        ]
+      },
+      "mulshi": {
+        "label": "Mulshi",
+        "source": "Sample",
+        "temp": 24,
+        "rain6h": 34,
+        "wind": 42,
+        "visibility": 2,
+        "rainRisk": "High",
+        "windRisk": "Medium",
+        "visibilityRisk": "Medium",
+        "heatRisk": "Normal",
+        "travelImpact": "High",
+        "advice": [
+          "Heavy rainfall may cause waterlogging. Allow extra travel time."
+        ]
+      }
+    }
   },
   "riverIntelligence": [
     {
@@ -35,7 +84,7 @@
       "timeline": {
         "state": "developing",
         "note": "Khadakwasla Dam release is high.",
-        "updatedAt": "2026-07-09T19:20:01.646Z"
+        "updatedAt": "2026-07-09T19:54:41.969Z"
       },
       "evidence": [
         {
@@ -73,7 +122,7 @@
       "timeline": {
         "state": "monitoring",
         "note": "Pawna Dam release is elevated.",
-        "updatedAt": "2026-07-09T19:20:01.646Z"
+        "updatedAt": "2026-07-09T19:54:41.969Z"
       },
       "evidence": [
         {
@@ -90,7 +139,7 @@
     }
   ],
   "seasonalIntelligence": {
-    "generatedAt": "2026-07-09T19:20:01.647Z",
+    "generatedAt": "2026-07-09T19:54:41.970Z",
     "activeSeason": "monsoon",
     "priorityHazards": [
       "flood",
@@ -103,7 +152,7 @@
     "advice": "Monitor rainfall, dam releases, waterlogging and ghat conditions."
   },
   "geographicIntelligence": {
-    "generatedAt": "2026-07-09T19:20:01.647Z",
+    "generatedAt": "2026-07-09T19:54:41.970Z",
     "model": "administrative-ui-operational-backend",
     "operationalZones": {
       "river_corridors": [
@@ -184,7 +233,7 @@
     "note": "UI remains Region → Taluka → Locality. Operational geography is used only by intelligence engines."
   },
   "criticalInfrastructure": {
-    "generatedAt": "2026-07-09T19:20:01.647Z",
+    "generatedAt": "2026-07-09T19:54:41.971Z",
     "mode": "on-demand",
     "relevantDomains": [
       "bridges",
@@ -223,14 +272,15 @@
     }
   },
   "environmentalImpact": {
-    "generatedAt": "2026-07-09T19:20:01.647Z",
+    "generatedAt": "2026-07-09T19:54:41.971Z",
     "riskLevel": "Elevated",
     "impacts": [
+      "3 area(s) have elevated rain-related travel impact.",
       "1 river or dam related warning(s) may affect downstream areas.",
       "1 active transport-related event(s) may affect travel."
     ],
-    "citizenSummary": "1 river or dam related warning(s) may affect downstream areas. 1 active transport-related event(s) may affect travel.",
+    "citizenSummary": "3 area(s) have elevated rain-related travel impact. 1 river or dam related warning(s) may affect downstream areas. 1 active transport-related event(s) may affect travel.",
     "seasonalContext": "monsoon"
   },
-  "story": "Khadakwasla Dam related river conditions may affect downstream areas. Avoid riverbanks. 2 important alerts require attention."
+  "story": "Heavy rainfall may affect travel in parts of Pune District. Khadakwasla Dam related river conditions may affect downstream areas. Avoid riverbanks. 2 important alerts require attention."
 }

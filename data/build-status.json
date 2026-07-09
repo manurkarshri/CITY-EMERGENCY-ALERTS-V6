@@ -1,14 +1,14 @@
 {
   "schemaVersion": "6.0.0",
   "build": {
-    "version": "6.0.0-dev",
-    "milestone": "C",
+    "version": "6.0.0-production-stabilization",
+    "milestone": "Production Stabilization Update 1",
     "status": "healthy",
-    "buildTime": "2026-07-09T19:20:01.813Z",
-    "note": "Journey Intelligence",
+    "buildTime": "2026-07-09T19:54:42.168Z",
+    "note": "Production-stabilized app shell with decision, environmental and journey intelligence",
     "alerts": 2,
     "incidents": 1,
-    "weatherRegions": 0,
+    "weatherRegions": 3,
     "riverEvents": 2,
     "journeys": 3
   }
