@@ -40,8 +40,8 @@ export async function loadAllData() {
   ]);
 
   state.intelligence = intelligence;
-  state.alerts = alertsData.items || intelligence.alerts || [];
-  state.incidents = incidentsData.items || intelligence.incidents || [];
+  state.alerts = sortEvents(alertsData.items || intelligence.alerts || []);
+  state.incidents = sortEvents(incidentsData.items || intelligence.incidents || []);
   state.environmental = environmental;
   state.journey = journey;
   state.build = build;
@@ -51,9 +51,27 @@ export async function loadAllData() {
 
 export function filteredEvents(items) {
   const { taluka, locality } = state.selected;
-  return (items || []).filter(item => {
-    const talukaMatch = !taluka || (item.talukas || []).includes(taluka) || !(item.talukas || []).length;
-    const localityMatch = !locality || (item.localities || []).includes(locality) || !(item.localities || []).length;
+  return sortEvents((items || []).filter(item => {
+    const talukas = item.talukas || [];
+    const localities = item.localities || [];
+    const talukaMatch = !taluka || talukas.includes(taluka) || talukas.length === 0;
+    const localityMatch = !locality || localities.includes(locality) || localities.length === 0;
     return talukaMatch && localityMatch;
+  }));
+}
+
+export function relevantEvents(items) {
+  const filtered = filteredEvents(items);
+  return filtered.length ? filtered : sortEvents(items || []);
+}
+
+export function sortEvents(items) {
+  const severityRank = { emergency: 4, warning: 3, watch: 2, advisory: 1 };
+  return [...(items || [])].sort((a, b) => {
+    const sev = (severityRank[b.severity] || 0) - (severityRank[a.severity] || 0);
+    if (sev) return sev;
+    const conf = (b.confidenceScore || 0) - (a.confidenceScore || 0);
+    if (conf) return conf;
+    return new Date(b.lastUpdated || b.publishedAt || 0) - new Date(a.lastUpdated || a.publishedAt || 0);
   });
 }
