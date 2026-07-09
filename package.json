@@ -6,6 +6,7 @@
   "scripts": {
     "validate": "node scripts/validation/validate-build.js",
     "build:status": "node scripts/builders/build-status.js",
+    "build:intelligence": "node scripts/run-intelligence-core.js",
     "test": "node tests/run-tests.js"
   },
   "license": "MIT"
