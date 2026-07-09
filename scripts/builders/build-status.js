@@ -8,11 +8,11 @@ const journey = await readJson("data/journey-intelligence.json", { journeys: [] 
 await writeJson("data/build-status.json", {
   schemaVersion: "6.0.0",
   build: {
-    version: "6.0.0-dev",
-    milestone: "C",
+    version: "6.0.0-production-stabilization",
+    milestone: "Production Stabilization Update 1",
     status: "healthy",
     buildTime: nowIso(),
-    note: "Journey Intelligence",
+    note: "Production-stabilized app shell with decision, environmental and journey intelligence",
     alerts: (intelligence.alerts || []).length,
     incidents: (intelligence.incidents || []).length,
     weatherRegions: Object.keys(environmental.weatherIntelligence?.regions || {}).length,
