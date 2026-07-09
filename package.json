@@ -1,6 +1,6 @@
 {
   "name": "city-emergency-alerts-v6",
-  "version": "6.0.0-dev",
+  "version": "6.0.0-rc1",
   "type": "module",
   "private": true,
   "scripts": {
