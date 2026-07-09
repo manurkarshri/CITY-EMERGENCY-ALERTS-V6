@@ -1,0 +1,13 @@
+{
+  "name": "city-emergency-alerts-v6",
+  "version": "6.0.0-dev",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "validate": "node scripts/validation/validate-build.js",
+    "build:status": "node scripts/builders/build-status.js",
+    "build:intelligence": "node scripts/run-intelligence-core.js",
+    "test": "node tests/run-tests.js"
+  },
+  "license": "MIT"
+}
