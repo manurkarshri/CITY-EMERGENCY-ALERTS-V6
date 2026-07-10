@@ -1,11 +1,11 @@
 {
   "schemaVersion": "6.0.0",
-  "generatedAt": "2026-07-09T23:45:10.576Z",
+  "generatedAt": "2026-07-10T02:40:04.320Z",
   "status": "healthy",
   "situation": {
     "snapshot": "Heavy rainfall may affect travel in parts of Pune District. Khadakwasla Dam related river conditions may affect downstream areas. Avoid riverbanks. 2 important alerts require attention.",
     "weather": {
-      "generatedAt": "2026-07-09T23:45:10.636Z",
+      "generatedAt": "2026-07-10T02:40:04.378Z",
       "regions": {
         "pune_city": {
           "label": "Pune City",
@@ -59,7 +59,7 @@
     },
     "changes": [],
     "environmentalImpact": {
-      "generatedAt": "2026-07-09T23:45:10.638Z",
+      "generatedAt": "2026-07-10T02:40:04.380Z",
       "riskLevel": "Elevated",
       "impacts": [
         "3 area(s) have elevated rain-related travel impact.",
@@ -99,7 +99,7 @@
       "lastUpdated": "2026-07-09T08:00:00+05:30",
       "lifecycle": "active",
       "confidence": "Medium",
-      "confidenceScore": 65,
+      "confidenceScore": 57,
       "impact": "River levels may rise downstream.",
       "recommendedAction": "Avoid riverbanks and follow official advisories.",
       "relatedEventIds": [
@@ -137,7 +137,7 @@
       "lastUpdated": "2026-07-09T08:10:00+05:30",
       "lifecycle": "active",
       "confidence": "Low",
-      "confidenceScore": 50,
+      "confidenceScore": 42,
       "impact": "River levels may rise downstream.",
       "recommendedAction": "Avoid riverbanks and follow official advisories.",
       "relatedEventIds": [
@@ -259,7 +259,7 @@
         "timeline": {
           "state": "developing",
           "note": "Khadakwasla Dam release is high.",
-          "updatedAt": "2026-07-09T23:45:10.637Z"
+          "updatedAt": "2026-07-10T02:40:04.379Z"
         },
         "evidence": [
           {
@@ -297,7 +297,7 @@
         "timeline": {
           "state": "monitoring",
           "note": "Pawna Dam release is elevated.",
-          "updatedAt": "2026-07-09T23:45:10.637Z"
+          "updatedAt": "2026-07-10T02:40:04.379Z"
         },
         "evidence": [
           {
@@ -314,7 +314,7 @@
       }
     ],
     "seasonalIntelligence": {
-      "generatedAt": "2026-07-09T23:45:10.638Z",
+      "generatedAt": "2026-07-10T02:40:04.380Z",
       "activeSeason": "monsoon",
       "priorityHazards": [
         "flood",
@@ -327,7 +327,7 @@
       "advice": "Monitor rainfall, dam releases, waterlogging and ghat conditions."
     },
     "geographicIntelligence": {
-      "generatedAt": "2026-07-09T23:45:10.637Z",
+      "generatedAt": "2026-07-10T02:40:04.379Z",
       "model": "administrative-ui-operational-backend",
       "operationalZones": {
         "river_corridors": [
@@ -408,7 +408,7 @@
       "note": "UI remains Region → Taluka → Locality. Operational geography is used only by intelligence engines."
     },
     "criticalInfrastructure": {
-      "generatedAt": "2026-07-09T23:45:10.638Z",
+      "generatedAt": "2026-07-10T02:40:04.380Z",
       "mode": "on-demand",
       "relevantDomains": [
         "bridges",
@@ -454,7 +454,7 @@
         "start": "Kharadi",
         "destination": "Hinjawadi",
         "departure": "now",
-        "generatedAt": "2026-07-09T23:45:10.695Z",
+        "generatedAt": "2026-07-10T02:40:04.435Z",
         "bestRoute": {
           "id": "kharadi-hinjawadi-pashan",
           "label": "Kharadi to Hinjawadi via Pashan",
@@ -606,7 +606,7 @@
         "start": "Pune",
         "destination": "Lonavala",
         "departure": "now",
-        "generatedAt": "2026-07-09T23:45:10.695Z",
+        "generatedAt": "2026-07-10T02:40:04.435Z",
         "bestRoute": {
           "id": "pune-lonavala-expressway",
           "label": "Pune to Lonavala via Mumbai-Pune Expressway",
@@ -721,7 +721,7 @@
         "start": "Swargate",
         "destination": "Sinhagad Road",
         "departure": "now",
-        "generatedAt": "2026-07-09T23:45:10.695Z",
+        "generatedAt": "2026-07-10T02:40:04.435Z",
         "bestRoute": {
           "id": "swargate-sinhagad-road",
           "label": "Swargate to Sinhagad Road",
