@@ -1,6 +1,6 @@
 {
   "schemaVersion": "6.0.0",
-  "generatedAt": "2026-07-10T23:59:24.974Z",
+  "generatedAt": "2026-07-11T03:31:24.716Z",
   "items": [
     {
       "id": "accident-traffic-slow-near-wakad-after-road-accident-on-highway-stretch-2026-07-09t09-00-0",
@@ -27,7 +27,7 @@
       "operationalZones": [],
       "publishedAt": "2026-07-09T09:00:00+05:30",
       "lastUpdated": "2026-07-09T09:00:00+05:30",
-      "lifecycle": "active",
+      "lifecycle": "monitoring",
       "confidence": "Medium",
       "confidenceScore": 65,
       "impact": "Traffic delays are likely near the incident location.",
