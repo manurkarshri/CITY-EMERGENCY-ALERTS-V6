@@ -1,11 +1,11 @@
 {
   "schemaVersion": "6.0.0",
-  "generatedAt": "2026-07-11T03:31:24.716Z",
+  "generatedAt": "2026-07-11T06:10:11.118Z",
   "status": "healthy",
   "situation": {
     "snapshot": "Heavy rainfall may affect travel in parts of Pune District. Khadakwasla Dam related river conditions may affect downstream areas. Avoid riverbanks. 2 important alerts require attention.",
     "weather": {
-      "generatedAt": "2026-07-11T03:31:24.768Z",
+      "generatedAt": "2026-07-11T06:10:11.174Z",
       "regions": {
         "pune_city": {
           "label": "Pune City",
@@ -59,7 +59,7 @@
     },
     "changes": [],
     "environmentalImpact": {
-      "generatedAt": "2026-07-11T03:31:24.769Z",
+      "generatedAt": "2026-07-11T06:10:11.175Z",
       "riskLevel": "Elevated",
       "impacts": [
         "3 area(s) have elevated rain-related travel impact.",
@@ -259,7 +259,7 @@
         "timeline": {
           "state": "developing",
           "note": "Khadakwasla Dam release is high.",
-          "updatedAt": "2026-07-11T03:31:24.768Z"
+          "updatedAt": "2026-07-11T06:10:11.174Z"
         },
         "evidence": [
           {
@@ -297,7 +297,7 @@
         "timeline": {
           "state": "monitoring",
           "note": "Pawna Dam release is elevated.",
-          "updatedAt": "2026-07-11T03:31:24.768Z"
+          "updatedAt": "2026-07-11T06:10:11.174Z"
         },
         "evidence": [
           {
@@ -314,7 +314,7 @@
       }
     ],
     "seasonalIntelligence": {
-      "generatedAt": "2026-07-11T03:31:24.769Z",
+      "generatedAt": "2026-07-11T06:10:11.175Z",
       "activeSeason": "monsoon",
       "priorityHazards": [
         "flood",
@@ -327,7 +327,7 @@
       "advice": "Monitor rainfall, dam releases, waterlogging and ghat conditions."
     },
     "geographicIntelligence": {
-      "generatedAt": "2026-07-11T03:31:24.769Z",
+      "generatedAt": "2026-07-11T06:10:11.175Z",
       "model": "administrative-ui-operational-backend",
       "operationalZones": {
         "river_corridors": [
@@ -408,7 +408,7 @@
       "note": "UI remains Region → Taluka → Locality. Operational geography is used only by intelligence engines."
     },
     "criticalInfrastructure": {
-      "generatedAt": "2026-07-11T03:31:24.769Z",
+      "generatedAt": "2026-07-11T06:10:11.175Z",
       "mode": "on-demand",
       "relevantDomains": [
         "bridges",
@@ -454,7 +454,7 @@
         "start": "Kharadi",
         "destination": "Hinjawadi",
         "departure": "now",
-        "generatedAt": "2026-07-11T03:31:24.817Z",
+        "generatedAt": "2026-07-11T06:10:11.228Z",
         "bestRoute": {
           "id": "kharadi-hinjawadi-pashan",
           "label": "Kharadi to Hinjawadi via Pashan",
@@ -606,7 +606,7 @@
         "start": "Pune",
         "destination": "Lonavala",
         "departure": "now",
-        "generatedAt": "2026-07-11T03:31:24.817Z",
+        "generatedAt": "2026-07-11T06:10:11.228Z",
         "bestRoute": {
           "id": "pune-lonavala-expressway",
           "label": "Pune to Lonavala via Mumbai-Pune Expressway",
@@ -721,7 +721,7 @@
         "start": "Swargate",
         "destination": "Sinhagad Road",
         "departure": "now",
-        "generatedAt": "2026-07-11T03:31:24.817Z",
+        "generatedAt": "2026-07-11T06:10:11.228Z",
         "bestRoute": {
           "id": "swargate-sinhagad-road",
           "label": "Swargate to Sinhagad Road",
