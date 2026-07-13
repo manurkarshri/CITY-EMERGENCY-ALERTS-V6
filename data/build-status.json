@@ -4,10 +4,10 @@
     "version": "6.0.0-production-stabilization",
     "milestone": "Production Stabilization Update 1",
     "status": "healthy",
-    "buildTime": "2026-07-13T02:27:17.773Z",
+    "buildTime": "2026-07-13T05:52:35.464Z",
     "note": "Production-stabilized app shell with decision, environmental and journey intelligence",
-    "alerts": 2,
-    "incidents": 1,
+    "alerts": 0,
+    "incidents": 0,
     "weatherRegions": 3,
     "riverEvents": 2,
     "journeys": 3
