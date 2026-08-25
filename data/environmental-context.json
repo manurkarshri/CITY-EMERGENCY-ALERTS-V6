@@ -1,8 +1,8 @@
 {
   "schemaVersion": "6.0.0",
-  "generatedAt": "2026-08-25T17:56:59.555Z",
+  "generatedAt": "2026-08-25T18:40:13.593Z",
   "weatherIntelligence": {
-    "generatedAt": "2026-08-25T17:56:59.553Z",
+    "generatedAt": "2026-08-25T18:40:13.591Z",
     "regions": {
       "pune_city": {
         "label": "Pune City",
@@ -84,7 +84,7 @@
       "timeline": {
         "state": "developing",
         "note": "Khadakwasla Dam release is high.",
-        "updatedAt": "2026-08-25T17:56:59.554Z"
+        "updatedAt": "2026-08-25T18:40:13.591Z"
       },
       "evidence": [
         {
@@ -122,7 +122,7 @@
       "timeline": {
         "state": "monitoring",
         "note": "Pawna Dam release is elevated.",
-        "updatedAt": "2026-08-25T17:56:59.554Z"
+        "updatedAt": "2026-08-25T18:40:13.591Z"
       },
       "evidence": [
         {
@@ -139,7 +139,7 @@
     }
   ],
   "seasonalIntelligence": {
-    "generatedAt": "2026-08-25T17:56:59.555Z",
+    "generatedAt": "2026-08-25T18:40:13.592Z",
     "activeSeason": "monsoon",
     "priorityHazards": [
       "flood",
@@ -152,7 +152,7 @@
     "advice": "Monitor rainfall, dam releases, waterlogging and ghat conditions."
   },
   "geographicIntelligence": {
-    "generatedAt": "2026-08-25T17:56:59.554Z",
+    "generatedAt": "2026-08-25T18:40:13.592Z",
     "model": "administrative-ui-operational-backend",
     "operationalZones": {
       "river_corridors": [
@@ -233,7 +233,7 @@
     "note": "UI remains Region → Taluka → Locality. Operational geography is used only by intelligence engines."
   },
   "criticalInfrastructure": {
-    "generatedAt": "2026-08-25T17:56:59.555Z",
+    "generatedAt": "2026-08-25T18:40:13.592Z",
     "mode": "on-demand",
     "relevantDomains": [],
     "infrastructure": {
@@ -269,7 +269,7 @@
     }
   },
   "environmentalImpact": {
-    "generatedAt": "2026-08-25T17:56:59.555Z",
+    "generatedAt": "2026-08-25T18:40:13.592Z",
     "riskLevel": "Elevated",
     "impacts": [
       "3 area(s) have elevated rain-related travel impact.",
