@@ -1,8 +1,8 @@
 {
   "schemaVersion": "6.0.0",
-  "generatedAt": "2026-10-06T23:31:53.267Z",
+  "generatedAt": "2026-10-07T04:06:03.198Z",
   "weatherIntelligence": {
-    "generatedAt": "2026-10-06T23:31:53.265Z",
+    "generatedAt": "2026-10-07T04:06:03.197Z",
     "regions": {
       "pune_city": {
         "label": "Pune City",
@@ -84,7 +84,7 @@
       "timeline": {
         "state": "developing",
         "note": "Khadakwasla Dam release is high.",
-        "updatedAt": "2026-10-06T23:31:53.266Z"
+        "updatedAt": "2026-10-07T04:06:03.198Z"
       },
       "evidence": [
         {
@@ -122,7 +122,7 @@
       "timeline": {
         "state": "monitoring",
         "note": "Pawna Dam release is elevated.",
-        "updatedAt": "2026-10-06T23:31:53.266Z"
+        "updatedAt": "2026-10-07T04:06:03.198Z"
       },
       "evidence": [
         {
@@ -139,13 +139,13 @@
     }
   ],
   "seasonalIntelligence": {
-    "generatedAt": "2026-10-06T23:31:53.267Z",
+    "generatedAt": "2026-10-07T04:06:03.198Z",
     "activeSeason": "normal",
     "priorityHazards": [],
     "advice": "Monitor current alerts and local incidents."
   },
   "geographicIntelligence": {
-    "generatedAt": "2026-10-06T23:31:53.266Z",
+    "generatedAt": "2026-10-07T04:06:03.198Z",
     "model": "administrative-ui-operational-backend",
     "operationalZones": {
       "river_corridors": [
@@ -226,7 +226,7 @@
     "note": "UI remains Region → Taluka → Locality. Operational geography is used only by intelligence engines."
   },
   "criticalInfrastructure": {
-    "generatedAt": "2026-10-06T23:31:53.267Z",
+    "generatedAt": "2026-10-07T04:06:03.198Z",
     "mode": "on-demand",
     "relevantDomains": [],
     "infrastructure": {
@@ -262,7 +262,7 @@
     }
   },
   "environmentalImpact": {
-    "generatedAt": "2026-10-06T23:31:53.267Z",
+    "generatedAt": "2026-10-07T04:06:03.198Z",
     "riskLevel": "Elevated",
     "impacts": [
       "3 area(s) have elevated rain-related travel impact.",
