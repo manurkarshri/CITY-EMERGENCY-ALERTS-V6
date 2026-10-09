@@ -1,6 +1,6 @@
 {
   "schemaVersion": "6.0.0",
-  "generatedAt": "2026-10-09T01:42:25.980Z",
+  "generatedAt": "2026-10-09T08:25:27.524Z",
   "status": "healthy",
   "journeys": [
     {
@@ -8,7 +8,7 @@
       "start": "Kharadi",
       "destination": "Hinjawadi",
       "departure": "now",
-      "generatedAt": "2026-10-09T01:42:25.980Z",
+      "generatedAt": "2026-10-09T08:25:27.523Z",
       "bestRoute": {
         "id": "kharadi-hinjawadi-nh48",
         "label": "Kharadi to Hinjawadi via NH48",
@@ -155,7 +155,7 @@
       "start": "Pune",
       "destination": "Lonavala",
       "departure": "now",
-      "generatedAt": "2026-10-09T01:42:25.980Z",
+      "generatedAt": "2026-10-09T08:25:27.524Z",
       "bestRoute": {
         "id": "pune-lonavala-expressway",
         "label": "Pune to Lonavala via Mumbai-Pune Expressway",
@@ -254,7 +254,7 @@
       "start": "Swargate",
       "destination": "Sinhagad Road",
       "departure": "now",
-      "generatedAt": "2026-10-09T01:42:25.980Z",
+      "generatedAt": "2026-10-09T08:25:27.524Z",
       "bestRoute": {
         "id": "swargate-sinhagad-road",
         "label": "Swargate to Sinhagad Road",
